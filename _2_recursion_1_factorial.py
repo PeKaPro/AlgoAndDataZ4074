@@ -1,3 +1,4 @@
+import sys
 
 """
 faktorial - funkce pro nezaporny cely cisla
@@ -42,6 +43,10 @@ def factorial_bad(n: int) -> int:
 
 
 factorial_bad(5)  # 120
+"""
+factorial_bad nema zadnou podminku na ukonceni rekurze, takze se "propada" do zapornych cisel a nikdy neskonci,
+coz nakonec vyvola chybu RecursionError - prekroceni maximalni hloubky rekurze
+"""
 
 
 def factorial_not_so_good(n: int) -> int:
@@ -95,10 +100,9 @@ factorial(1.1)
 
 
 
-
+# isinstance jako metoda pro posouzeni jestli objekt je int (funguje i na subclasses)
 class MyInt(int):
     pass
-
 
 x = MyInt("3")
 x + 54
@@ -110,4 +114,31 @@ isinstance("3.7", (int, float))
 
 type(x)
 isinstance(x, int)
+
+
+
+
+faktorial_2500 = factorial(2500)
+print(faktorial_2500)
+factorial(2500)
+
+
+
+
+sys.set_int_max_str_digits(100000)
+
+print(faktorial_2500)
+
+len(str(faktorial_2500))
+
+
+
+
+faktorial_vysledek = factorial(3500)
+
+sys.getrecursionlimit()
+
+sys.setrecursionlimit(10000)
+
+len(str(faktorial_vysledek))
 
