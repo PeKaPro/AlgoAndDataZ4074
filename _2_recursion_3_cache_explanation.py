@@ -22,7 +22,6 @@ print(my_function)
 my_function.__defaults__[0].append("Ahoj")
 
 
-
 def fn(a: int, b:int=123):
     pass
 
