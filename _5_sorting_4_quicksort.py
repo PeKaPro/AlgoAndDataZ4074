@@ -59,13 +59,25 @@ small + same + large
 
 
 def quicksort(array: list):
-    if len(array) < 2:
-       return array
+    """
+        chci rozdelit list na 3 sub listy,
+        small - mensi hodnoty,
+        same - stejne hodnoty,
+        large - vetsi hodnoty
+
+        a na ne dal aplikovat stejny postup rozdelovani
+        ... az se stane ze list je prazdny nebo jednoclenny - potom vim, ze je serazeny a muzu zacit vracet vysledek
+        vysledek = small + same + large
+        """
+
+    if len(array) < 2:  # ukoncovaci podminka rekurze
+        return array
 
     small, same, large = [], [], []
 
-    pivot = random.choice(array)
+    pivot = random.choice(array)  # pivot muze byt nahodne zvoleny (je to rychlejsi nez pocitat treba median)
 
+    # distribuce hodnot do listu small, same, large...
     for element in array:
         if element < pivot:
             small.append(element)
@@ -74,6 +86,7 @@ def quicksort(array: list):
         else:
             same.append(element)
 
+    # return a rekurzivni volani
     return quicksort(small) + same + quicksort(large)
 
 

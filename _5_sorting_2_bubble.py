@@ -1,9 +1,12 @@
 import random
 
-[10, 29, 23, 31, 6]  # start
-[6, 10, 23, 29, 31]
+# nejmensi -> nejvetsi
 
-# 1. kolo start
+[10, 29, 23, 31, 6]  # start
+[6, 10, 23, 29, 31]  #ocekavany vysledek
+
+# odkrokovana ukazka, insert sort se snazi tlacit male elementy vic a vic doleva
+# prvni kolo start
 [[10, 29], 23, 31, 6]
 
 [10, [29, 23], 31, 6]
@@ -15,6 +18,7 @@ import random
 [10, 23, 29, [6, 31]]
 
 [10, 23, 29, 6, 31]
+# prvni kolo end
 
 
 def bubble_sort(array: list):
@@ -22,10 +26,10 @@ def bubble_sort(array: list):
 
     n = len(array)
 
-    for i in range(n):
+    for i in range(n):  # toto spousti "kolo"
         already_sorted = True
 
-        for j in range(n - 1 -i):
+        for j in range(n - 1 - i):  # i je cislo vnejsi iterace, po dobehle prvni iteraci je nejvetsi element uplne nejvic vpravo = vlastnost bubble...
             pocet_kroku += 1
 
             cislo1 = array[j]
