@@ -31,19 +31,20 @@ def binary_search_iter(li: list, number: int) -> int | None:
     return None
 
 
-my_list = [random.randint(0, 100_000_000) for i in range(1000)]
+if __name__ == '__main__':
 
-print(my_list[:10])
+    my_list = [random.randint(0, 100_000_000) for i in range(1000)]
 
-my_list.sort()
+    print(my_list[:10])
 
-print(my_list[:10])
+    my_list.sort()
 
+    print(my_list[:10])
 
-print(binary_search_iter(my_list, 817453))
+    print(binary_search_iter(my_list, 817453))
 
-my_list[7]
+    my_list[7]
 
+    print(binary_search_iter(my_list, random.choice(my_list)))
 
-print(binary_search_iter(my_list, random.choice(my_list)))
 
