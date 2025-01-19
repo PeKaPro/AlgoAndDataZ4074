@@ -60,15 +60,15 @@ small + same + large
 
 def quicksort(array: list):
     """
-        chci rozdelit list na 3 sub listy,
-        small - mensi hodnoty,
-        same - stejne hodnoty,
-        large - vetsi hodnoty
+    chci rozdelit list na 3 sub listy,
+    small - mensi hodnoty,
+    same - stejne hodnoty,
+    large - vetsi hodnoty
 
-        a na ne dal aplikovat stejny postup rozdelovani
-        ... az se stane ze list je prazdny nebo jednoclenny - potom vim, ze je serazeny a muzu zacit vracet vysledek
-        vysledek = small + same + large
-        """
+    a na ne dal aplikovat stejny postup rozdelovani
+    ... az se stane ze list je prazdny nebo jednoclenny - potom vim, ze je serazeny a muzu zacit vracet vysledek
+    vysledek = small + same + large
+    """
 
     if len(array) < 2:  # ukoncovaci podminka rekurze
         return array

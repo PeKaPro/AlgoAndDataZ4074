@@ -23,6 +23,8 @@ my_new_list = sorted(my_list)
 print(my_list)
 print(my_new_list)
 
+# my_list = sorted(my_list)
+
 
 # timsort - algoritmus, ktery je v pythonu pouzit pro sorting
 # kompozitni algoritmus
@@ -45,6 +47,8 @@ my_dict = {
     "b": 1,
     "c": 20
 }
+
+
 
 # jak z dictu najit klic s nejmensi hodnotou
 min(my_dict)
